@@ -1,0 +1,1 @@
+Built using HTML, CSS, and JavaScript, it provides functionality to start, stop, and reset the timer while displaying hours, minutes, seconds, and milliseconds in real-time. Users can also record multiple time intervals
