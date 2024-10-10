@@ -27,13 +27,6 @@ function startStopwatch() {
     }
     displayTime();
   };
-<<<<<<< HEAD:script.js
-  console.log(getTime);
-
-=======
-  
-  
->>>>>>> 89cdaf65f05b9313afc916fc2db44356d497ea2d:scriptsjs
   if (!timerId) timerId = setInterval(getTime, 10);
 }
 
