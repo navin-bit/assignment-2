@@ -13,7 +13,7 @@ let records = [];
 function startStopwatch() {
   let getTime = () => {
     ms += 10;
-    if (ms === 100) {
+    if (ms === 1000) {
       ms = 0;
       s++;
     }
