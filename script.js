@@ -25,7 +25,7 @@ function startStopwatch() {
       m = 0;
       h++;
     }
-    displayTime();
+    displayTimeFormat();
   };
   if (!timerId) timerId = setInterval(getTime, 10);
 }
@@ -40,7 +40,7 @@ function stopStopwatch() {
         ms
       )}`
     );
-    addPreviousRecord();
+    DisplayPreviousRecord();
   }
 }
 
@@ -50,8 +50,8 @@ function resetStopwatch() {
   ms = s = m = h = 0;
   records = [];
 
-  displayTime();
-  addPreviousRecord();
+  displayTimeFormat();
+  DisplayPreviousRecord();
 }
 
 function formatTime(digit) {
@@ -62,14 +62,14 @@ function formatMilliseconds(ms) {
   return ms.toString().padStart(2, "0");
 }
 
-function displayTime() {
+function displayTimeFormat() {
   milliseconds.textContent = formatMilliseconds(ms);
   seconds.textContent = formatTime(s);
   minutes.textContent = formatTime(m);
   hours.textContent = formatTime(h);
 }
 
-function addPreviousRecord() {
+function DisplayPreviousRecord() {
   recordList.innerHTML = records
     .map((record, i) => `<li>Record ${i + 1}: ${record}</li>`)
     .join("");
